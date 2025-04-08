@@ -1,1 +1,27 @@
-PAISES
+
+
+<h2>Paises</h2>
+<hr>
+
+<div class="row">
+
+    <div class="col-3">
+        <ul class="list-group">
+
+            <li routerLinkActive="active"
+                routerLink="lista-paises"
+                class="list-group-item">Listado de Paises</li>
+
+
+            <li routerLinkActive="active"
+                routerLink="buscar-pais"
+                class="list-group-item">Busqueda</li>
+            
+        </ul>
+    </div>
+
+    <div class="col">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>

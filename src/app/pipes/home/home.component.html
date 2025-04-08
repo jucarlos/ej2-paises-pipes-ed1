@@ -1,1 +1,22 @@
-PIPES
+
+<h2>Pipes</h2>
+<hr>
+
+<div class="row mt-4">
+    
+    <div class="col-3">
+        <ul class="list-group">
+            <li routerLink="comunes"
+                routerLinkActive="active"
+                class="list-group-item">Comunes</li>
+            <li routerLink="no-comunes"
+                routerLinkActive="active"
+                class="list-group-item">No Comunes</li>
+        </ul>
+    </div>
+
+    <div class="col">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>

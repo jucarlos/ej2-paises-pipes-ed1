@@ -1,1 +1,71 @@
-<p>comunes works!</p>
+
+
+<table class="table border">
+    <thead>
+      <tr>
+        <th scope="col">Nombre del Pipe</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Salida</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>upperCase</td>
+        <td>{{ ciudad }}</td>
+        <td>{{ ciudad | uppercase }}</td>
+      </tr>
+
+      <tr>
+        <td>lowercase</td>
+        <td>{{ ciudad }}</td>
+        <td>{{ ciudad | lowercase }}</td>
+      </tr>
+
+      <tr>
+        <td>titlecase</td>
+        <td>{{ frase }}</td>
+        <td>{{ frase | titlecase }}</td>
+      </tr>
+
+      <tr>
+        <td>DatePipe</td>
+        <td>{{ hoy }}</td>
+        <td>{{ hoy | date }}</td>
+      </tr>
+
+      <tr>
+        <td>DatePipe</td>
+        <td>{{ hoy }}</td>
+        <td>{{ hoy | date:'short' }}</td>
+      </tr>
+
+      <tr>
+        <td>DatePipe</td>
+        <td>{{ hoy }}</td>
+        <td>{{ hoy | date:'fullDate' }}</td>
+      </tr>
+
+      <tr>
+        <td>Currency</td>
+        <td>{{ precio }}</td>
+        <td>{{ precio | currency:'EUR' }}</td>
+      </tr>
+
+
+      <tr>
+        <td>number</td>
+        <td>{{ numeroDecimales }}</td>
+        <td>{{ numeroDecimales | number:'1.2-2' }}</td>
+      </tr>
+
+
+      
+
+
+
+
+  
+    </tbody>
+  </table>
