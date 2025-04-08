@@ -19,7 +19,7 @@ const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'lista-paises'
+        redirectTo: 'buscar-pais'
       }
     ]
   }

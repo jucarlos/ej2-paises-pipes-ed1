@@ -5,6 +5,8 @@ import { PaisesRoutingModule } from './paises-routing.module';
 import { HomeComponent } from './home/home.component';
 import { ListaComponent } from './pages/lista/lista.component';
 import { BuscarpaisComponent } from './pages/buscarpais/buscarpais.component';
+import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -13,11 +15,13 @@ import { BuscarpaisComponent } from './pages/buscarpais/buscarpais.component';
     HomeComponent,
     ListaComponent,
     BuscarpaisComponent,
+    TablaPaisesComponent,
 
   ],
   imports: [
     CommonModule,
-    PaisesRoutingModule
+    PaisesRoutingModule,
+    SharedModule
   ]
 })
 export class PaisesModule { }

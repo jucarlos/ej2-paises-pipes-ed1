@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class BuscarpaisComponent {
 
+  buscarPaisPorCapital(termino: string ) {
+
+       termino = termino + 'Estamos en el padre';
+       console.log( 'Estamos en el padre: ', termino );
+  }
+
+
+
+
 }

@@ -5,6 +5,8 @@ import { RESTCountry } from '../interfaces/rest-country.interface';
 import { map, Observable } from 'rxjs';
 import { CountryMapper } from '../mappers/country.mapper';
 import { Country } from '../interfaces/country.interface';
+import { environment } from '../../../environments/environment.development';
+
 
 @Injectable({
     providedIn: 'root'
@@ -19,7 +21,7 @@ export class PaisesService {
 
     obtenerPaises(): Observable<Country[]> {
 
-        const url = 'https://restcountries.com/v3.1/all';
+        const url = environment.baseUrl;
 
         return this.http.get<RESTCountry[]>( url )
         .pipe(

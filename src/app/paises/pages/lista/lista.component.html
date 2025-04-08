@@ -8,29 +8,13 @@
         <span class="visually-hidden">Loading...</span>
       </div>
 } @else {
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Bandera</th>
-                <th>Nombre</th>
-                <th>Capital</th>
-                <th>Población</th>
-            </tr>
-        </thead>
-    
-        <tbody>
-            <tr *ngFor="let country of countries; let i = index">
-                <td>{{ i + 1 }}</td>
-                <td>
-                    <img [src]="country.flagSvg" class="w75">
-                </td>
-                <td>{{ country.name }}</td>
-                <td>{{ country.capital }}</td>
-                <td>{{ country.population }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Poner un componente tabla -->
+    <paises-tabla-paises 
+         [countries]="countries" 
+    ></paises-tabla-paises>
 }
+
+
+
 
 
