@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PaisesService } from '../../services/paises.service';
+import { Country } from '../../interfaces/country.interface';
 
 @Component({
   selector: 'app-buscarpais',
@@ -8,10 +10,30 @@ import { Component } from '@angular/core';
 })
 export class BuscarpaisComponent {
 
+  private paisesService = inject(PaisesService);
+
+  public isLoading = false;
+  public isError = false;
+  public countries: Country[] = [];
+
   buscarPaisPorCapital(termino: string ) {
 
-       termino = termino + 'Estamos en el padre';
-       console.log( 'Estamos en el padre: ', termino );
+      this.isLoading = true;
+
+      this.paisesService.buscarPaisesPorCapital( termino )
+      .subscribe ( resp => {
+
+        
+        this.countries = resp;
+        console.log( resp );
+        this.isLoading = false;
+
+       });
+
+
+
+
+       
   }
 
 

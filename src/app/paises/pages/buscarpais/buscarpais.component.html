@@ -6,14 +6,24 @@
 <div class="row">
     <div class="col-4">
         <shared-busqueda
-      
         (onDebounce)="buscarPaisPorCapital($event )"
         ></shared-busqueda>
     </div>
 </div>
 <hr>
 <div class="row">
-    <div class="col">
-        RESULTADO DE LA BÚSQUEDA.
-    </div>
+
+    @if( isError ) {
+        <div class="alert alert-info" role="alert">
+            No hay datos
+          </div>
+    } @else {
+        <div class="col">
+            <paises-tabla-paises 
+            [countries]="countries" 
+            ></paises-tabla-paises>
+        </div>
+    }
+    
+   
 </div>
